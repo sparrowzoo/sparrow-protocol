@@ -1,10 +1,13 @@
 package com.sparrow.protocol.enums;
 
-public enum Platform {
+/**
+ * @author zh_harry@163.com
+ */
+public enum PLATFORM {
 
     Unkonwn(-1, "Unkonwn"),
     iOS(1, "iOS"),
-    Android(1, "Android"),
+    Android(2, "Android"),
     PC(0, "PC");
     ;
 
@@ -12,7 +15,7 @@ public enum Platform {
 
     private String desc;
 
-    Platform(int platform, String desc) {
+    PLATFORM(int platform, String desc) {
         this.platform = platform;
         this.desc = desc;
     }
@@ -33,7 +36,7 @@ public enum Platform {
             '}';
     }
 
-    public static Platform getByPlatform(int platform) {
+    public static PLATFORM getByPlatform(int platform) {
         if (platform == iOS.platform) {
             return iOS;
         } else if (platform == Android.platform) {
