@@ -1,6 +1,6 @@
 package com.sparrow.protocol;
 
-import com.sparrow.protocol.enums.Platform;
+import com.sparrow.protocol.enums.PLATFORM;
 import java.io.Serializable;
 
 /**
@@ -47,7 +47,7 @@ public class ClientInfomation implements Serializable{
     /**
      * os platform
      */
-    private Platform platform;
+    private PLATFORM platform;
 
     /**
      * 操作系统
@@ -170,11 +170,11 @@ public class ClientInfomation implements Serializable{
         this.appVersion = appVersion;
     }
 
-    public Platform getPlatform() {
+    public PLATFORM getPlatform() {
         return platform;
     }
 
-    public void setPlatform(Platform platform) {
+    public void setPlatform(PLATFORM platform) {
         this.platform = platform;
     }
 

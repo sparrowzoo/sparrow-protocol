@@ -31,7 +31,23 @@ public class BusinessException extends Exception {
      */
     private Integer code;
     /**
-     * 国际化标签 key.suffix ［suffix 对应前端界面的name］
+     * 用于提示信息国际化的key
+     *
+     * key=ErrorSupport.name()+suffix ［
+     *
+     * suffix 对应前端界面  input name
+     *
+     * 由于 error support 提供的可能是公共错误信息，针对每一个输入可能提示信息不一样
+     *
+     * 举例:
+     *
+     * GLOBAL_CONTENT_IS_NULL
+     *
+     * 提示信息可能为:
+     *
+     * 1. 用户名不允许为空
+     *
+     * 2. 密码不能为空...
      */
     private String key;
     /**
@@ -42,11 +58,11 @@ public class BusinessException extends Exception {
     public BusinessException(ErrorSupport errorSupport, String suffix, List<Object> parameters) {
         super(errorSupport.getMessage());
         this.key = errorSupport.name();
-        if (suffix!=null) {
+        if (suffix != null) {
             this.key = this.key + "." + suffix.toLowerCase();
         }
         this.code = errorSupport.getCode();
-        if (parameters != null && parameters.size() > 0 && parameters.get(0).toString().trim().equals("")) {
+        if (parameters != null && parameters.size() > 0 && "".equals(parameters.get(0).toString().trim())) {
             this.parameters = parameters;
         }
     }
@@ -95,6 +111,6 @@ public class BusinessException extends Exception {
             sb.append(object.toString().trim());
         }
         return String.format("key-%1$s,code-%2$s-parameters-%3$s", key, code,
-                sb.toString());
+            sb.toString());
     }
 }
