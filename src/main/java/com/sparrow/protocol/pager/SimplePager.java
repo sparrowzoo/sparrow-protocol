@@ -32,4 +32,12 @@ public class SimplePager {
     public Integer getCurrentPageIndex() {
         return currentPageIndex;
     }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public void setCurrentPageIndex(Integer currentPageIndex) {
+        this.currentPageIndex = currentPageIndex;
+    }
 }
