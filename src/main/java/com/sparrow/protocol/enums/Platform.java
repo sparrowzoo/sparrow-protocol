@@ -3,11 +3,10 @@ package com.sparrow.protocol.enums;
 public enum Platform {
 
     Unkonwn(-1, "Unkonwn"),
-    iOS(0, "iOS"),
+    iOS(1, "iOS"),
     Android(1, "Android"),
-
+    PC(0, "PC");
     ;
-
 
     private int platform;
 
@@ -29,9 +28,9 @@ public enum Platform {
     @Override
     public String toString() {
         return "Platform{" +
-                "platform=" + platform +
-                ", desc='" + desc + '\'' +
-                '}';
+            "platform=" + platform +
+            ", desc='" + desc + '\'' +
+            '}';
     }
 
     public static Platform getByPlatform(int platform) {
