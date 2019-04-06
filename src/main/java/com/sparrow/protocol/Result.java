@@ -57,8 +57,8 @@ public class Result<T> implements VO {
     private String error;
     /**
      * 错误 key= key.suffix
-     *
-     *
+     * <p>
+     * <p>
      * suffix==input name
      */
     private String key;
@@ -104,5 +104,9 @@ public class Result<T> implements VO {
 
     public String getKey() {
         return key;
+    }
+
+    public void setError(String error) {
+        this.error = error;
     }
 }

@@ -32,22 +32,24 @@ public class BusinessException extends Exception {
     private Integer code;
     /**
      * 用于提示信息国际化的key
-     *
+     * <p>
      * key=ErrorSupport.name()+suffix ［
-     *
+     * <p>
      * suffix 对应前端界面  input name
-     *
+     * <p>
      * 由于 error support 提供的可能是公共错误信息，针对每一个输入可能提示信息不一样
-     *
+     * <p>
      * 举例:
-     *
+     * <p>
      * GLOBAL_CONTENT_IS_NULL
-     *
+     * <p>
      * 提示信息可能为:
-     *
+     * <p>
      * 1. 用户名不允许为空
-     *
+     * <p>
      * 2. 密码不能为空...
+     * <p>
+     * 注:由客户端负责国际化配置
      */
     private String key;
     /**
@@ -111,6 +113,6 @@ public class BusinessException extends Exception {
             sb.append(object.toString().trim());
         }
         return String.format("key-%1$s,code-%2$s-parameters-%3$s", key, code,
-            sb.toString());
+                sb.toString());
     }
 }
