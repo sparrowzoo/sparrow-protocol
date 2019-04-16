@@ -6,9 +6,10 @@ package com.sparrow.protocol.enums;
 public enum PLATFORM {
 
     Unkonwn(-1, "Unkonwn"),
-    iOS(1, "iOS"),
+    IOS(1, "IOS"),
     Android(2, "Android"),
-    PC(0, "PC");
+    PC(0, "PC"),
+    WECHAT(3, "WECHAT"),
     ;
 
     private int platform;
@@ -31,18 +32,28 @@ public enum PLATFORM {
     @Override
     public String toString() {
         return "Platform{" +
-            "platform=" + platform +
-            ", desc='" + desc + '\'' +
-            '}';
+                "platform=" + platform +
+                ", desc='" + desc + '\'' +
+                '}';
     }
 
     public static PLATFORM getByPlatform(int platform) {
-        if (platform == iOS.platform) {
-            return iOS;
-        } else if (platform == Android.platform) {
-            return Android;
-        } else {
-            return Unkonwn;
+        if (platform == IOS.platform) {
+            return IOS;
         }
+
+        if (platform == Android.platform) {
+            return Android;
+        }
+
+        if (platform == PC.platform) {
+            return PC;
+        }
+
+        if (platform == WECHAT.platform) {
+            return WECHAT;
+        }
+
+        return Unkonwn;
     }
 }

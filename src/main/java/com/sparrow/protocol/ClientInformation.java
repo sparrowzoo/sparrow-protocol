@@ -10,7 +10,7 @@ import java.io.Serializable;
  * Android: {"version":"8.0.0","os":"Android","start_time":"0","resume_time":"1535980166621","channel":"200","model":"Xiaomi||MI 6","ssid":"\"kanzhun-inc.com\"","bssid":"10:c1:72:92:b4:d0","imei":"99000939602526","longitude":116.445757,"dzt":0,"latitude":39.970334,"network":"WIFI"}
  */
 
-public class ClientInfomation implements Serializable{
+public class ClientInformation implements Serializable{
     /**
      * 子站域名
      */
