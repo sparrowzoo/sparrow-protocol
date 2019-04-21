@@ -17,6 +17,7 @@
 
 package com.sparrow.protocol;
 
+import com.sparrow.protocol.constant.magic.SYMBOL;
 import java.util.Collections;
 import java.util.List;
 
@@ -64,7 +65,7 @@ public class BusinessException extends Exception {
             this.key = this.key + "." + suffix.toLowerCase();
         }
         this.code = errorSupport.getCode();
-        if (parameters != null && parameters.size() > 0 && "".equals(parameters.get(0).toString().trim())) {
+        if (parameters != null && parameters.size() > 0 && SYMBOL.EMPTY.equals(parameters.get(0).toString().trim())) {
             this.parameters = parameters;
         }
     }
@@ -82,7 +83,7 @@ public class BusinessException extends Exception {
     }
 
     public BusinessException(ErrorSupport errorSupport) {
-        this(errorSupport, null, "");
+        this(errorSupport, null, SYMBOL.EMPTY);
     }
 
     public Integer getCode() {
@@ -108,7 +109,7 @@ public class BusinessException extends Exception {
         StringBuilder sb = new StringBuilder();
         for (Object object : parameters) {
             if (sb.length() > 0) {
-                sb.append(",");
+                sb.append(SYMBOL.COMMA);
             }
             sb.append(object.toString().trim());
         }
