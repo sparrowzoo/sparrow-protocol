@@ -5,7 +5,7 @@ package com.sparrow.protocol;
  *
  * @author harry
  */
-public class LoginDTO {
+public class LoginToken implements VO{
     private Long userId;
     private String nickName;
     private String userName;
@@ -15,8 +15,9 @@ public class LoginDTO {
     private Boolean activate;
     private Integer days;
     private Long expireAt;
+    private String permission;
 
-    public static LoginDTO create(Long userId,
+    public static LoginToken create(Long userId,
                                   String userName,
                                   String nickName,
                                   String avatar,
@@ -24,7 +25,7 @@ public class LoginDTO {
                                   String deviceId,
                                   Boolean activate,
                                   Integer expireDays) {
-        LoginDTO login = new LoginDTO();
+        LoginToken login = new LoginToken();
         login.userId = userId;
         login.userName = userName;
         login.nickName = nickName;
@@ -111,5 +112,13 @@ public class LoginDTO {
 
     public void setExpireAt(Long expireAt) {
         this.expireAt = expireAt;
+    }
+
+    public String getPermission() {
+        return permission;
+    }
+
+    public void setPermission(String permission) {
+        this.permission = permission;
     }
 }
