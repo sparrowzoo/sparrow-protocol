@@ -14,4 +14,10 @@
     <properties>
         <curator.version>2.10.0</curator.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+    </dependencies>
 </project>
