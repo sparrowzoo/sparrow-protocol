@@ -107,13 +107,15 @@ public class BusinessException extends Exception {
     public String toString() {
 
         StringBuilder sb = new StringBuilder();
-        for (Object object : parameters) {
-            if (sb.length() > 0) {
-                sb.append(SYMBOL.COMMA);
+        if(parameters!=null) {
+            for (Object object : parameters) {
+                if (sb.length() > 0) {
+                    sb.append(SYMBOL.COMMA);
+                }
+                sb.append(object.toString().trim());
             }
-            sb.append(object.toString().trim());
         }
-        return String.format("key-%1$s,code-%2$s-parameters-%3$s", key, code,
+        return String.format("key:%s,code:%s,parameters:%s", key, code,
                 sb.toString());
     }
 }

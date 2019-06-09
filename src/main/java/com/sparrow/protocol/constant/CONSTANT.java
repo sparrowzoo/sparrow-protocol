@@ -79,10 +79,10 @@ public class CONSTANT {
     public static final String REQUEST_DATABASE_SUFFIX = "sparrow_request_database_suffix";
     public static final String REQUEST_ACTION_INCLUDE = "javax.servlet.include.servlet_path";
     public static final String REQUEST_ACTION_CURRENT_FORUM = "request_action_current_forum";
+    public static final String REQUEST_CLIENT_INFORMATION="client";
+
 
     public static final String ACTION_RESULT_URL_PARAMETERS = "url_parameters";
-
-    public static final String ACTION_RESULT_JAVASCRIPT = "javascript";
 
     public static final String ACTION_RESULT_FLASH_KEY = "flash";
 

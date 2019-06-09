@@ -6,6 +6,9 @@ package com.sparrow.protocol;
  * @description:
  */
 public class MobileShortMessaging {
+    private MobileShortMessaging() {
+    }
+
     /**
      * app key
      */
@@ -54,73 +57,46 @@ public class MobileShortMessaging {
         return key;
     }
 
-    public void setKey(String key) {
-        this.key = key;
-    }
 
     public String getMobile() {
         return mobile;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
 
     public String getTemplateId() {
         return templateId;
     }
 
-    public void setTemplateId(String templateId) {
-        this.templateId = templateId;
-    }
 
     public String getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 
     public String getValidateCode() {
         return validateCode;
     }
 
-    public void setValidateCode(String validateCode) {
-        this.validateCode = validateCode;
-    }
 
     public Long getSendTime() {
         return sendTime;
     }
 
-    public void setSendTime(Long sendTime) {
-        this.sendTime = sendTime;
-    }
 
     public String getCompanyName() {
         return companyName;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
 
     public String getBusiness() {
         return business;
     }
 
-    public void setBusiness(String business) {
-        this.business = business;
-    }
 
     public static class Builder {
         private String key;
@@ -218,16 +194,16 @@ public class MobileShortMessaging {
 
         public MobileShortMessaging build() {
             MobileShortMessaging msm = new MobileShortMessaging();
-            msm.setCompanyName(this.companyName);
-            msm.setContent(this.content);
-            msm.setKey(this.key);
-            msm.setMobile(this.mobile);
-            msm.setSendTime(this.sendTime);
-            msm.setTemplateId(this.templateId);
-            msm.setMobile(this.mobile);
-            msm.setUserId(this.userId);
-            msm.setValidateCode(this.validateCode);
-            msm.setBusiness(this.business);
+            msm.companyName=this.companyName;
+            msm.content=this.content;
+            msm.key=this.key;
+            msm.mobile=this.mobile;
+            msm.sendTime=this.sendTime;
+            msm.templateId=this.templateId;
+            msm.mobile=this.mobile;
+            msm.userId=this.userId;
+            msm.validateCode=this.validateCode;
+            msm.business=this.business;
             return msm;
         }
     }
