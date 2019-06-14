@@ -19,11 +19,15 @@ package com.sparrow.protocol;
 
 import com.sparrow.protocol.constant.CONSTANT;
 
+import java.util.List;
+
 /**
  * 可用于协议 规范服务端返回格式 <p> <p> BusinessException KEY ErrorSupport SPARROW_ERROR name+suffix=key suffix 与界面name 对应 <p> <p>
  * 为什么用该类型？与异常相比 考虑继承的问题 枚举不可以继承 考虑该类要求稳定不经常修改 不要影响数据协议 考虑第三调用的泛型
  *
  * @author harry
+ *
+ * json 反序列化，set get 方法一定要存在
  */
 public class Result<T> implements VO {
 
@@ -68,6 +72,8 @@ public class Result<T> implements VO {
      */
     private T data;
 
+    private List<Object> parameters;
+
     private static Result ok = new Result();
 
     public static Result OK() {
@@ -77,7 +83,7 @@ public class Result<T> implements VO {
     public static Result FAIL(BusinessException business) {
         Result result = new Result(business.getCode(), business.getMessage());
         result.key = business.getKey();
-        result.data = business.getParameters();
+        result.parameters = business.getParameters();
         return result;
     }
 
@@ -109,5 +115,33 @@ public class Result<T> implements VO {
 
     public void setError(String error) {
         this.error = error;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public List<Object> getParameters() {
+        return parameters;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public void setParameters(List<Object> parameters) {
+        this.parameters = parameters;
+    }
+
+    public static Result getOk() {
+        return ok;
+    }
+
+    public static void setOk(Result ok) {
+        Result.ok = ok;
     }
 }
