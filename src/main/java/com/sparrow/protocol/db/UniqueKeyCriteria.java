@@ -1,8 +1,17 @@
 package com.sparrow.protocol.db;
 
 public class UniqueKeyCriteria {
+    /**
+     * 返回结果字段
+     */
     private String resultFiled;
+    /**
+     * unique key
+     */
     private Object key;
+    /**
+     * unique filed name
+     */
     private String uniqueFieldName;
 
     private UniqueKeyCriteria(String resultFiled, Object key, String uniqueFieldName) {
