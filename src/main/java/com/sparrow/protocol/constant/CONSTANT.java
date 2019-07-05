@@ -72,7 +72,13 @@ public class CONSTANT {
     public static final String DEFAULT_LANGUAGE = "zh_cn";
     public static final Integer RESULT_OK_CODE = 0;
     public static final String MESSAGE_KEY_PREFIX = "mk_";
-    public static final String EXCEPTION_RESULT = "exception_result";
+
+    /**
+     * flash key非业务key
+     */
+    public static final String FLASH_KEY = "flash";
+    public static final String FLASH_EXCEPTION_RESULT = "flash_exception_result";
+    public static final String FLASH_SUCCESS_RESULT = "flash_success_result";
 
     public static final String REQUEST_LANGUAGE = "sparrow_request_language";
     public static final String REQUEST_USER_ID = "sparrow_request_user_id";
@@ -83,9 +89,6 @@ public class CONSTANT {
 
 
     public static final String ACTION_RESULT_URL_PARAMETERS = "url_parameters";
-
-    public static final String ACTION_RESULT_FLASH_KEY = "flash";
-
     public static final String STRING_ALL = "all";
     /**
      * 空链接

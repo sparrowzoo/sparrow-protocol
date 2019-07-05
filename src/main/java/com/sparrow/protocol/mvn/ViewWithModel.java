@@ -27,10 +27,6 @@ public class ViewWithModel {
     private VO vo;
     private String url;
     private PageSwitchMode switchMode;
-    /**
-     * session数据保存地址
-     */
-    private String flashUrl;
 
     private ViewWithModel() {
     }
@@ -43,10 +39,6 @@ public class ViewWithModel {
         this.vo = vo;
         this.url = url;
         this.switchMode = switchMode;
-//        String extension = Config.getValue(CONFIG.DEFAULT_PAGE_EXTENSION, EXTENSION.JSP);
-//        if (this.url.endsWith(extension) || !switchMode.equals(PageSwitchMode.FORWARD)) {
-//            this.flashUrl = url;
-//        }
     }
 
     public static ViewWithModel forward(VO vo) {
@@ -107,9 +99,5 @@ public class ViewWithModel {
 
     public PageSwitchMode getSwitchMode() {
         return switchMode;
-    }
-
-    public String getFlashUrl() {
-        return flashUrl;
     }
 }
