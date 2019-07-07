@@ -20,12 +20,13 @@ package com.sparrow.protocol.pager;
 import java.util.List;
 
 /**
- * simple pager result without html
+ * pager result without html
+ *
  * @author harry
  */
-public class SimplePagerResult<T> extends SimplePager {
+public class PagerResult<T> extends SimplePager {
 
-    public SimplePagerResult(Integer currentPageIndex, Integer pageSize) {
+    public PagerResult(Integer currentPageIndex, Integer pageSize) {
         super(currentPageIndex, pageSize);
     }
 
