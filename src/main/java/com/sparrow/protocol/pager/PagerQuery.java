@@ -36,8 +36,8 @@ public class PagerQuery extends SimplePager {
     }
 
 
-    public PagerQuery(Integer currentPageIndex, Integer pageSize) {
-        super(currentPageIndex, pageSize);
+    public PagerQuery(Integer pageSize,Integer currentPageIndex) {
+        super(pageSize,currentPageIndex);
     }
 
 

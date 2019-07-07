@@ -26,8 +26,8 @@ import java.util.List;
  */
 public class PagerResult<T> extends SimplePager {
 
-    public PagerResult(Integer currentPageIndex, Integer pageSize) {
-        super(currentPageIndex, pageSize);
+    public PagerResult(Integer pageSize, Integer currentPageIndex) {
+        super(pageSize,currentPageIndex);
     }
 
     protected Long recordCount;

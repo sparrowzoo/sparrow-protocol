@@ -11,14 +11,16 @@ public class SimplePager {
     /**
      * page size
      */
-    protected Integer pageSize;
+    protected Integer pageSize=10;
     /**
      * current page index
      */
     protected Integer currentPageIndex;
 
     public SimplePager(Integer pageSize, Integer currentPageIndex) {
-        this.pageSize = pageSize;
+        if(pageSize!=null) {
+            this.pageSize = pageSize;
+        }
         if (currentPageIndex == null) {
             currentPageIndex = 1;
         }
