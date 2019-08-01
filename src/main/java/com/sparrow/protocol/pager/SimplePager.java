@@ -1,9 +1,11 @@
 package com.sparrow.protocol.pager;
 
+import com.sparrow.protocol.POJO;
+
 /**
  * simpler pager without html
  */
-public class SimplePager {
+public class SimplePager implements POJO {
 
     public SimplePager() {
     }
@@ -11,14 +13,14 @@ public class SimplePager {
     /**
      * page size
      */
-    protected Integer pageSize=10;
+    protected Integer pageSize = 10;
     /**
      * current page index
      */
     protected Integer currentPageIndex;
 
     public SimplePager(Integer pageSize, Integer currentPageIndex) {
-        if(pageSize!=null) {
+        if (pageSize != null) {
             this.pageSize = pageSize;
         }
         if (currentPageIndex == null) {

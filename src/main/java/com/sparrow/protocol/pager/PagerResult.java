@@ -26,8 +26,18 @@ import java.util.List;
  */
 public class PagerResult<T> extends SimplePager {
 
+    public PagerResult(SimplePager simplePager) {
+        if (simplePager == null) {
+            currentPageIndex = 1;
+            return;
+        }
+        this.currentPageIndex = simplePager.getCurrentPageIndex();
+        this.pageSize = simplePager.getPageSize();
+
+    }
+
     public PagerResult(Integer pageSize, Integer currentPageIndex) {
-        super(pageSize,currentPageIndex);
+        super(pageSize, currentPageIndex);
     }
 
     protected Long recordCount;
@@ -52,8 +62,6 @@ public class PagerResult<T> extends SimplePager {
 
     /**
      * 根据总记录数和每页记录数获取最后页码
-     *
-     * @return
      */
     public Integer getLastPageIndex() {
         return (int) Math.ceil((double) this.recordCount / this.pageSize);
