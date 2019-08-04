@@ -47,11 +47,5 @@ public enum STATUS_RECORD {
     /**
      * 队列发布出错(5)
      */
-    ERROR;
-
-//    @Override
-//    public String toString() {
-//        String key = super.toString();
-//        return Config.getLanguageValue("status_" + key.toLowerCase());
-//    }
+    ERROR
 }

@@ -10,7 +10,7 @@ public class UniqueKeyCriteria {
      */
     private Object key;
     /**
-     * unique filed name
+     * unique filed name default is primary key
      */
     private String uniqueFieldName;
 

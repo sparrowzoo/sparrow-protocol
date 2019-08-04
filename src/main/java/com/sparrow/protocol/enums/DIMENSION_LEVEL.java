@@ -15,39 +15,27 @@
  * limitations under the License.
  */
 
-package com.sparrow.protocol.pager;
+package com.sparrow.protocol.enums;
 
 /**
- * simple pager search parameter
- *
  * @author harry
  */
-public class PagerQuery extends SimplePager {
-    public PagerQuery() {
-    }
 
+public enum DIMENSION_LEVEL {
     /**
-     * avoid deep pager
+     * 本人
      */
-    public PagerQuery(Integer pageSize) {
-        super(0, pageSize);
-    }
-
-
-    public PagerQuery(Integer pageSize, Integer currentPageIndex) {
-        super(pageSize, currentPageIndex);
-    }
-
-
-    public String getLimitClause() {
-        //no page
-        if (pageSize <= 0) {
-            return "";
-        }
-        if (this.currentPageIndex == null) {
-            this.currentPageIndex = 1;
-        }
-        int offset = pageSize * (this.currentPageIndex <= 1 ? 0 : this.currentPageIndex-1);
-        return " limit " + offset + "," + this.getPageSize();
-    }
+    SELF,
+    /**
+     * 当前维度
+     */
+    DIMENSION,
+    /**
+     * 当前维度及子维度
+     */
+    DIMENSION_CHILD,
+    /**
+     * 所有
+     */
+    ALL
 }

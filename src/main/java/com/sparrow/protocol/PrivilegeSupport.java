@@ -15,39 +15,33 @@
  * limitations under the License.
  */
 
-package com.sparrow.protocol.pager;
+package com.sparrow.protocol;
+
+import com.sparrow.protocol.enums.DIMENSION_LEVEL;
+
+import java.util.Map;
 
 /**
- * simple pager search parameter
- *
  * @author harry
  */
-public class PagerQuery extends SimplePager {
-    public PagerQuery() {
-    }
+public interface PrivilegeSupport {
+
+    boolean accessible(Long writer, Long currentUserId);
+
+    boolean accessible(Long userId,
+                       String resource, String value) throws BusinessException;
+
+    String getStrategy(Long userId,
+                       String strategyCode) throws BusinessException;
+
+    void setPrivilege(String strategy, String selectedResource,
+                      Long groupId) throws BusinessException;
 
     /**
-     * avoid deep pager
+     * 数据权限过滤接口
+     *
+     * @param filter key 为需要过滤的字段，value为需要过滤的级别
+     * @return
      */
-    public PagerQuery(Integer pageSize) {
-        super(0, pageSize);
-    }
-
-
-    public PagerQuery(Integer pageSize, Integer currentPageIndex) {
-        super(pageSize, currentPageIndex);
-    }
-
-
-    public String getLimitClause() {
-        //no page
-        if (pageSize <= 0) {
-            return "";
-        }
-        if (this.currentPageIndex == null) {
-            this.currentPageIndex = 1;
-        }
-        int offset = pageSize * (this.currentPageIndex <= 1 ? 0 : this.currentPageIndex-1);
-        return " limit " + offset + "," + this.getPageSize();
-    }
+    String getFilter(Map<String, DIMENSION_LEVEL> filter);
 }
