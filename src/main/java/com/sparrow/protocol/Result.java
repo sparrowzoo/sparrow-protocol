@@ -58,6 +58,7 @@ public class Result<T> implements VO {
     private Integer code;
     /**
      * 错误文本
+     * 需要业务自定义获取错误信息获取器
      */
     private String error;
     /**

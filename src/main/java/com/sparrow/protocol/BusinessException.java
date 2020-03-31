@@ -65,7 +65,7 @@ public class BusinessException extends Exception {
             this.key = this.key + "." + suffix.toLowerCase();
         }
         this.code = errorSupport.getCode();
-        if (parameters != null && parameters.size() > 0 && SYMBOL.EMPTY.equals(parameters.get(0).toString().trim())) {
+        if (parameters != null && parameters.size() > 0) {
             this.parameters = parameters;
         }
     }
