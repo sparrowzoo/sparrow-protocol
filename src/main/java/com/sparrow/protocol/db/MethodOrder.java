@@ -14,5 +14,5 @@ public @interface MethodOrder {
      *
      * @return 该属性的顺序
      */
-    int order();
+    float order();
 }
