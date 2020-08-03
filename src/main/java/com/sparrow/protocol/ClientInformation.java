@@ -6,8 +6,9 @@ import java.io.Serializable;
 /**
  * @author: zh_harry@163.com
  * @date: 2019-03-23 16:38
- * @description: iOS: {"end_time":"1535971770858","os":"iOS","longitude":"116.446014","model":"iPhone10,1","start_time":"1535971439568","ssid":"kanzhun-inc.com","bssid":"10:c1:72:92:b4:c0","version":"11.4.1","latitude":"39.970479","resume_time":"1535971802314","idfa":"EF4F9CCD-3B6A-4553-95FB-486FB33885B7"}
- * Android: {"version":"8.0.0","os":"Android","start_time":"0","resume_time":"1535980166621","channel":"200","model":"Xiaomi||MI 6","ssid":"\"kanzhun-inc.com\"","bssid":"10:c1:72:92:b4:d0","imei":"99000939602526","longitude":116.445757,"dzt":0,"latitude":39.970334,"network":"WIFI"}
+ * @description:
+ * iOS: {"end_time":"1535971770858","os":"iOS","longitude":"116.446014","model":"iPhone10,1","start_time":"1535971439568","ssid":"sparrow-zoo.com","bssid":"10:c1:72:92:b4:c0","version":"11.4.1","latitude":"39.970479","resume_time":"1535971802314","idfa":"EF4F9CCD-3B6A-4553-95FB-486FB33885B7"}
+ * Android: {"version":"8.0.0","os":"Android","start_time":"0","resume_time":"1535980166621","channel":"200","model":"Xiaomi||MI 6","ssid":"\"sparrow-zoo.com\"","bssid":"10:c1:72:92:b4:d0","imei":"99000939602526","longitude":116.445757,"dzt":0,"latitude":39.970334,"network":"WIFI"}
  */
 
 public class ClientInformation implements Serializable{
@@ -20,7 +21,7 @@ public class ClientInformation implements Serializable{
      */
     private String ip;
     /**
-     * 注册设备 iphone/三星/华为
+     * 注册设备 iphone/三星/华为/浏览器
      */
     private String device;
     /**

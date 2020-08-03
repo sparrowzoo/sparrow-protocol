@@ -48,7 +48,7 @@ public class CLIENT_INFORMATION {
     public static String OS="OS";
 
 
-    public static String USER_AGENT="user-agent";
+    public static String USER_AGENT="User-Agent";
 
     /**
      * os version not app version
