@@ -17,39 +17,76 @@
 
 package com.sparrow.protocol.enums;
 
+import java.io.Serializable;
+
 /**
- * 记录状态
- *
  * @author harry
- * @version 1.0
  */
-public enum STATUS_RECORD {
+
+public enum MEDIA implements Serializable {
+
     /**
-     * 被屏蔽(0)
+     * 图片
      */
-    DISABLE,
+    NEWS("图文","isNews"),
+
     /**
-     * 可用(1)
+     * 链接
      */
-    ENABLE,
+    LINK("链接","isLink"),
+
     /**
-     * 草搞(2)
+     * 文本
      */
-    DRAFT,
+    TEXT("文本","isText"),
+
     /**
-     * 已发布(3)
+     * 图片
      */
-    PUBLISHED,
+    IMAGE("图片","isPicture"),
+
     /**
-     * 排队中(4)...
+     * flash
      */
-    QUEUE,
+    FLASH("视频","isVideo"),
+
     /**
-     * 队列发布出错(5)
+     * 语音
      */
-    ERROR,
+    VOICE("语音","isVoice"),
+
     /**
-     * 销毁(6)
+     * 视频
      */
-    DESTROYED
+    VIDEO("视频","isVideo"),
+
+    /**
+     * 音乐
+     */
+    MUSIC("音乐","isMusic");
+
+    private String text;
+    private String field;
+
+    MEDIA(String text, String field) {
+        this.text = text;
+        this.field = field;
+    }
+
+    public String value() {
+        return super.toString().toLowerCase();
+    }
+
+    @Override
+    public String toString() {
+        return this.text + "|" + this.field + "|" + super.toString();
+    }
+
+    public String getField() {
+        return field;
+    }
+
+    public String getText() {
+        return text;
+    }
 }
