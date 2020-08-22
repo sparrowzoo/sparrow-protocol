@@ -84,7 +84,7 @@ public interface DaoSupport<T, I> {
 
     Long getCountByUnique(UniqueKeyCriteria uniqueKeyCriteria);
 
-    Long getCount(Object key);
+    Long getCount(I key);
 
     <X> X getFieldValueByUnique(UniqueKeyCriteria uniqueKeyCriteria);
 

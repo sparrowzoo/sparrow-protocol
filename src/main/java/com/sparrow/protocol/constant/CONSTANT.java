@@ -41,6 +41,7 @@ public class CONSTANT {
     public static final String ENTER_TEXT_N="\n";
     public static final String ERROR_CSS_CLASS = "error";
     public static final String VALIDATE_CODE = "validate_code";
+    public static final String IMAGE_EXTENSION=".jpg|.jpeg|.gif|.png";
 
     public static final String CHARSET_UTF_8 = "UTF-8";
     public static final String CHARSET_GBK = "GBK";
