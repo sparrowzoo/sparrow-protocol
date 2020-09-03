@@ -17,6 +17,8 @@
 
 package com.sparrow.protocol.pager;
 
+import com.sparrow.protocol.VO;
+
 import java.util.List;
 
 /**
@@ -24,7 +26,7 @@ import java.util.List;
  *
  * @author harry
  */
-public class PagerResult<T> extends SimplePager {
+public class PagerResult<T> extends SimplePager implements VO {
 
     public PagerResult(SimplePager simplePager) {
         if (simplePager == null) {

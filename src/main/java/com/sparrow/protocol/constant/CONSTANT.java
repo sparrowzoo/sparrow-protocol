@@ -38,10 +38,10 @@ public class CONSTANT {
     public static final String WORKSPACE = "workspace";
     public static final String NULL_JSON = "''";
     public static final String ENTER_TEXT = "\r\n";
-    public static final String ENTER_TEXT_N="\n";
+    public static final String ENTER_TEXT_N = "\n";
     public static final String ERROR_CSS_CLASS = "error";
     public static final String VALIDATE_CODE = "validate_code";
-    public static final String IMAGE_EXTENSION=".jpg|.jpeg|.gif|.png";
+    public static final String IMAGE_EXTENSION = ".jpg|.jpeg|.gif|.png";
 
     public static final String CHARSET_UTF_8 = "UTF-8";
     public static final String CHARSET_GBK = "GBK";
@@ -65,6 +65,10 @@ public class CONSTANT {
     public static final String TABLE_SUFFIX = "$suffix";
 
     public static final String IMAGE_TEMP_MARK = "#image_temp_mark%1$s#";
+
+    public static final String IMAGE_MARKDOWN_MARK_FORMAT = "![%1$s](%2$s)";
+
+    public static final String IMAGE_HTML_MARK_FORMAT = "<img src=\"%1$s\"/>";
     /**
      * 访问被拒绝
      */
@@ -86,7 +90,7 @@ public class CONSTANT {
     public static final String REQUEST_DATABASE_SUFFIX = "sparrow_request_database_suffix";
     public static final String REQUEST_ACTION_INCLUDE = "javax.servlet.include.servlet_path";
     public static final String REQUEST_ACTION_CURRENT_FORUM = "request_action_current_forum";
-    public static final String REQUEST_CLIENT_INFORMATION="client";
+    public static final String REQUEST_CLIENT_INFORMATION = "client";
 
 
     public static final String ACTION_RESULT_URL_PARAMETERS = "url_parameters";
@@ -100,6 +104,8 @@ public class CONSTANT {
     public static final String HTTP_PROTOCOL = "http://";
     public static final String HTTPS_PROTOCOL = "https://";
     public static final String LOCALHOST_IP = "127.0.0.1";
+
+
 
     /**
      * 用于宏替换的常量
