@@ -30,7 +30,7 @@ public class PagerQuery extends SimplePager {
      * avoid deep pager
      */
     public PagerQuery(Integer pageSize) {
-        super(0, pageSize);
+        super(pageSize, 0);
     }
 
 

@@ -1,6 +1,8 @@
-package com.sparrow.protocol;
+package com.sparrow.protocol.dto;
 
-public class SimpleItemDTO {
+import com.sparrow.protocol.POJO;
+
+public class SimpleItemDTO implements POJO {
     private Long id;
     private String title;
     private String url;
@@ -10,13 +12,13 @@ public class SimpleItemDTO {
     private String formatDate;
     private String summary;
     private String coverImage;
-    private Integer like;
-    private Integer disLike;
+    private Integer up;
+    private Integer down;
 
     public SimpleItemDTO() {
     }
 
-    public SimpleItemDTO(Long id, String title, String url, String more, String author, String formatDate, String summary, String coverImage,Integer like,Integer disLike) {
+    public SimpleItemDTO(Long id, String title, String url, String more, String author, String formatDate, String summary, String coverImage,Integer up,Integer down) {
         this.id = id;
         this.title = title;
         this.url = url;
@@ -25,8 +27,8 @@ public class SimpleItemDTO {
         this.formatDate = formatDate;
         this.summary = summary;
         this.coverImage = coverImage;
-        this.like=like;
-        this.disLike=disLike;
+        this.up =up;
+        this.down =down;
     }
 
     public Long getId() {
@@ -93,20 +95,20 @@ public class SimpleItemDTO {
         this.coverImage = coverImage;
     }
 
-    public Integer getLike() {
-        return like;
+    public Integer getUp() {
+        return up;
     }
 
-    public void setLike(Integer like) {
-        this.like = like;
+    public void setUp(Integer up) {
+        this.up = up;
     }
 
-    public Integer getDisLike() {
-        return disLike;
+    public Integer getDown() {
+        return down;
     }
 
-    public void setDisLike(Integer disLike) {
-        this.disLike = disLike;
+    public void setDown(Integer down) {
+        this.down = down;
     }
 
     public Long getAuthorId() {

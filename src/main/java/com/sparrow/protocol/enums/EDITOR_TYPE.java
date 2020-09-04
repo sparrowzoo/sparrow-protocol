@@ -2,6 +2,6 @@ package com.sparrow.protocol.enums;
 
 public enum EDITOR_TYPE {
     MARKDOWN,
-    ORIGIN_HTML,
+    HTML,
     FORMAT_HTML
 }
