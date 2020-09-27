@@ -20,6 +20,7 @@ package com.sparrow.protocol.pager;
 import com.sparrow.protocol.VO;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * pager result without html
@@ -45,6 +46,8 @@ public class PagerResult<T> extends SimplePager implements VO {
     protected Long recordCount;
 
     protected List<T> list;
+
+
 
     public Long getRecordCount() {
         return recordCount;

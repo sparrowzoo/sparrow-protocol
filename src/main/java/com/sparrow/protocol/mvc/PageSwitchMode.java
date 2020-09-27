@@ -15,33 +15,23 @@
  * limitations under the License.
  */
 
-package com.sparrow.protocol;
-
-import com.sparrow.protocol.enums.DIMENSION_LEVEL;
-
-import java.util.Map;
+package com.sparrow.protocol.mvc;
 
 /**
  * @author harry
  */
-public interface PrivilegeSupport {
-
-    boolean accessible(Long writer, Long currentUserId);
-
-    boolean accessible(Long userId,
-                       String url, String code) throws BusinessException;
-
-    String getStrategy(Long userId,
-                       String strategyCode) throws BusinessException;
-
-    void setPrivilege(String strategy, String selectedResource,
-                      Long groupId) throws BusinessException;
-
+public enum PageSwitchMode {
     /**
-     * 数据权限过滤接口
-     *
-     * @param filter key 为需要过滤的字段，value为需要过滤的级别
-     * @return
+     * 转发
      */
-    String getFilter(Map<String, DIMENSION_LEVEL> filter);
+    FORWARD,
+    /**
+     * 重定向
+     */
+    REDIRECT,
+    /**
+     * 中转
+     */
+    TRANSIT
 }
+

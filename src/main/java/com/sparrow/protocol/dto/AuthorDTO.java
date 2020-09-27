@@ -12,10 +12,6 @@ public class AuthorDTO implements POJO {
      * 专区id
      */
     private String zone;
-    /**
-     * 性别
-     */
-    private String sex;
 
     /**
      * 当前积分
@@ -99,14 +95,6 @@ public class AuthorDTO implements POJO {
 
     public void setZone(String zone) {
         this.zone = zone;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
     }
 
     public Long getCent() {

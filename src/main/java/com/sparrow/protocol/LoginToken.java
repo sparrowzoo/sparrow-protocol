@@ -34,6 +34,9 @@ public class LoginToken implements VO{
         login.deviceId = deviceId;
         login.activate = activate;
         login.days = expireDays;
+        if(login.days==null){
+            login.days=1;
+        }
         if (expireDays > 0) {
             login.expireAt = System.currentTimeMillis() + 1000 * 60 * 60 * 24L * expireDays;
         } else {

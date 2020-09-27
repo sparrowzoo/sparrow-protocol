@@ -2,6 +2,8 @@ package com.sparrow.protocol.dto;
 
 import com.sparrow.protocol.POJO;
 
+import java.util.List;
+
 public class SimpleItemDTO implements POJO {
     private Long id;
     private String title;
@@ -14,11 +16,13 @@ public class SimpleItemDTO implements POJO {
     private String coverImage;
     private Integer up;
     private Integer down;
+    private Integer love;
+    private List<SimpleItemDTO> children;
 
     public SimpleItemDTO() {
     }
 
-    public SimpleItemDTO(Long id, String title, String url, String more, String author, String formatDate, String summary, String coverImage,Integer up,Integer down) {
+    public SimpleItemDTO(Long id, String title, String url, String more, String author, String formatDate, String summary, String coverImage, Integer up, Integer down, Integer love) {
         this.id = id;
         this.title = title;
         this.url = url;
@@ -27,8 +31,9 @@ public class SimpleItemDTO implements POJO {
         this.formatDate = formatDate;
         this.summary = summary;
         this.coverImage = coverImage;
-        this.up =up;
-        this.down =down;
+        this.up = up;
+        this.down = down;
+        this.love = love;
     }
 
     public Long getId() {
@@ -117,5 +122,21 @@ public class SimpleItemDTO implements POJO {
 
     public void setAuthorId(Long authorId) {
         this.authorId = authorId;
+    }
+
+    public Integer getLove() {
+        return love;
+    }
+
+    public void setLove(Integer love) {
+        this.love = love;
+    }
+
+    public List<SimpleItemDTO> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<SimpleItemDTO> children) {
+        this.children = children;
     }
 }

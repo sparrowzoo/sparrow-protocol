@@ -93,7 +93,6 @@ public class CONSTANT {
     public static final String REQUEST_CLIENT_INFORMATION = "client";
 
 
-    public static final String ACTION_RESULT_URL_PARAMETERS = "url_parameters";
     public static final String STRING_ALL = "all";
     /**
      * 空链接

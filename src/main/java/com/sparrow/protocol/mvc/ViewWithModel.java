@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.sparrow.protocol.mvn;
+package com.sparrow.protocol.mvc;
 
 import com.sparrow.protocol.VO;
 import com.sparrow.protocol.constant.CONSTANT;
@@ -28,6 +28,7 @@ public class ViewWithModel {
     private String url;
     private String transitUrl;
     private PageSwitchMode switchMode;
+    private String []urlArgs;
 
     private ViewWithModel() {
     }
@@ -116,5 +117,14 @@ public class ViewWithModel {
 
     public void setTransitUrl(String transitUrl) {
         this.transitUrl = transitUrl;
+    }
+
+    public String[] getUrlArgs() {
+        return urlArgs;
+    }
+
+    public ViewWithModel setUrlArgs(String... urlArgs) {
+        this.urlArgs = urlArgs;
+        return this;
     }
 }

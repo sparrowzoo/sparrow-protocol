@@ -15,23 +15,26 @@
  * limitations under the License.
  */
 
-package com.sparrow.protocol.mvn;
+package com.sparrow.protocol.enums;
 
 /**
  * @author harry
  */
-public enum PageSwitchMode {
+public enum IMAGE_CONDITION {
     /**
-     * 转发
+     * 所有帖，包括图文
      */
-    FORWARD,
+    ALL,
     /**
-     * 重定向
+     * 显示封面图
      */
-    REDIRECT,
+    COVER,
     /**
-     * 中转
+     * 显示图片
      */
-    TRANSIT
+    IMAGE,
+    /**
+     * 不显示图片
+     */
+    NONE
 }
-
