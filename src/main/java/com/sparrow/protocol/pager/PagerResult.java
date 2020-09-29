@@ -27,7 +27,7 @@ import java.util.Map;
  *
  * @author harry
  */
-public class PagerResult<T> extends SimplePager implements VO {
+public class PagerResult<T,A> extends SimplePager implements VO {
 
     public PagerResult(SimplePager simplePager) {
         if (simplePager == null) {
@@ -47,7 +47,15 @@ public class PagerResult<T> extends SimplePager implements VO {
 
     protected List<T> list;
 
+    protected A addition;
 
+    public A getAddition() {
+        return addition;
+    }
+
+    public void setAddition(A addition) {
+        this.addition = addition;
+    }
 
     public Long getRecordCount() {
         return recordCount;

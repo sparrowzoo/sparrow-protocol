@@ -75,7 +75,7 @@ public class CONSTANT {
     public static final String ACCESS_DENIED = "Access Denied";
 
     public static final String DEFAULT_LANGUAGE = "zh_cn";
-    public static final Integer RESULT_OK_CODE = 0;
+    public static final String RESULT_OK_CODE = "0";
     public static final String MESSAGE_KEY_PREFIX = "mk_";
 
     /**

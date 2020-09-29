@@ -29,7 +29,7 @@ public interface ErrorSupport extends Serializable {
 
     ModuleSupport module();
 
-    int getCode();
+    String getCode();
 
     String getMessage();
 

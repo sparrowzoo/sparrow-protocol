@@ -2,7 +2,7 @@ package com.sparrow.protocol.pager;
 
 import java.util.Map;
 
-public class PagerResultWithDictionary<T, DK, DV> extends PagerResult<T> {
+public class PagerResultWithDictionary<T, DK, DV,A> extends PagerResult<T,A> {
     private Map<DK, DV> dictionaries;
     public PagerResultWithDictionary(SimplePager simplePager) {
         super(simplePager);

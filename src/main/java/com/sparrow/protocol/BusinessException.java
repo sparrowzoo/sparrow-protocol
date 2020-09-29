@@ -32,7 +32,7 @@ public class BusinessException extends Exception {
     /**
      * 错误码
      */
-    private Integer code;
+    private String code;
     /**
      * 用于提示信息国际化的key
      * <p>
@@ -88,7 +88,7 @@ public class BusinessException extends Exception {
         this(errorSupport, null, SYMBOL.EMPTY);
     }
 
-    public Integer getCode() {
+    public String getCode() {
         return code;
     }
 

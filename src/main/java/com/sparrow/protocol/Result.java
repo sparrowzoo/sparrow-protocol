@@ -47,7 +47,7 @@ public class Result<T> implements VO {
         }
     }
 
-    public Result(int code, String message) {
+    public Result(String code, String message) {
         this.code = code;
         this.error = message;
     }
@@ -55,7 +55,7 @@ public class Result<T> implements VO {
     /**
      * 错误编码
      */
-    private Integer code;
+    private String code;
     /**
      * 错误文本
      * 需要业务自定义获取错误信息获取器
@@ -89,7 +89,7 @@ public class Result<T> implements VO {
     }
 
     public static Result FAIL() {
-        int code = -1;
+        String code = "-1";
         String msg = "system error";
         return new Result(code, msg);
     }
@@ -102,7 +102,7 @@ public class Result<T> implements VO {
         return this.code.equals(CONSTANT.RESULT_OK_CODE);
     }
 
-    public int getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -126,7 +126,7 @@ public class Result<T> implements VO {
         return parameters;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
