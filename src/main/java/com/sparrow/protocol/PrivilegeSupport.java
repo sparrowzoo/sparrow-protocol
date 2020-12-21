@@ -28,7 +28,7 @@ public interface PrivilegeSupport {
 
     boolean accessible(Long writer, Long currentUserId);
 
-    boolean accessible(Long userId,
+    boolean accessible(LoginToken user,
                        String url, String code) throws BusinessException;
 
     String getStrategy(Long userId,

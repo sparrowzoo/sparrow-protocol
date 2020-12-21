@@ -7,12 +7,12 @@ import com.sparrow.protocol.POJO;
  */
 public class ImageDTO implements POJO {
     private Boolean inner;
-    private Long imageId;
+    private String imageId;
     private String remark;
     private String extension;
     private String imageMark;
 
-    public ImageDTO(Long imageId, String imageHtml, String extension, String remark, Boolean inner) {
+    public ImageDTO(String imageId, String imageHtml, String extension, String remark, Boolean inner) {
         this.imageId = imageId;
         this.imageMark = imageHtml;
         this.extension=extension;
@@ -20,7 +20,7 @@ public class ImageDTO implements POJO {
         this.inner=inner;
     }
 
-    public Long getImageId() {
+    public String getImageId() {
         return imageId;
     }
 

@@ -27,7 +27,10 @@ import java.util.Map;
  *
  * @author harry
  */
-public class PagerResult<T,A> extends SimplePager implements VO {
+public class PagerResult<T, A> extends SimplePager implements VO {
+
+    public PagerResult() {
+    }
 
     public PagerResult(SimplePager simplePager) {
         if (simplePager == null) {

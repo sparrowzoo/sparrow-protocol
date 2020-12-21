@@ -19,7 +19,9 @@ package com.sparrow.protocol.db;
 
 import com.sparrow.protocol.pager.PagerQuery;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 /**
  * table identify 可以跨db mybatis hibernate jdbc elastic search
@@ -79,6 +81,10 @@ public interface DaoSupport<T, I> {
     T getEntityByUnique(UniqueKeyCriteria uniqueKeyCriteria);
 
     List<T> getList();
+
+    List<T> getList(Collection<I> ids);
+
+    Map<I, T> getEntityMap(Collection<I> ids);
 
     List<T> getList(PagerQuery query);
 
